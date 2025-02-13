@@ -12,7 +12,7 @@ pagenum: 23
 7.	that oficio and asperezes – año 1622 
 8.	[he] gives me four coins	Thomas Pas-
 9.						cual mo
-10.	yhuan citiales, candelas teixpan, asu unca atla izintan coro m[?]
+
 
 
 [1] This abbreviation may indicate “honorable” (honorable) or “habitante” (inhabitant).
