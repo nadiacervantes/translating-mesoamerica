@@ -4,17 +4,17 @@ title: 'Transcription'
 pagenum: 23
 ---
 <h3>Diplomatic</h3>
-1.	Y nehuatl notuca LL Thomas Pascual mo ytic njcān
+1.	Y nehuatl notuca H Thomas Pascual mo ytic njcān
 2.	chinamitl st zhoan bauhtista altepeuh yscox
 3.	ascan ypan 6 tunali yc ti metzli de mazo
 4.	E nic cupini y jamauh notlaçopiltzin –
 5.	ffraw phelipe chani st miguel acatan
 6.	i[…]o haquino quiquistiliz ytechcopa
 7.	q oficio yhuā asperzes – año 1622 y
-8.	nechmaca naui ts 		A thomas pas	
-9.					    cual mo           A
+8.	nechmaca naui ts 		 thomas pas	
+9.					    cual mo           
 <h3>Standardized</h3>
-1.	In nehuatl notoca LL Tomás Pascual mo itic nican
+1.	In nehuatl notoca H Tomás Pascual mo itic nican
 2.	chinamitl San Juan Bautista altepeuh Iscox
 3.	ascan ipan 6 tonalli ic ti meztli de marzo
 4.	[A]uh niccopini y j amauh notlazopiltzin
