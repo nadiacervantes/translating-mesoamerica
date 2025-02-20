@@ -28,8 +28,8 @@ pagenum: 44
 21.	glia sea dada al Padre,
 22.	Y gloria al eterno hijo
 23.	gloria al espiritu santo,
-24.	por los siglos de los siglos.
 
+24.	por los siglos de los siglos.
 25.	Niman quipuas Christiano se Pater noster yhuan matacti
 26.	Ave Maria _ Macuili estacion macuilpa metlapalo Santa
 27.	Maria yca nican castilan tleu tatoli; yhuan macuilpa mu
