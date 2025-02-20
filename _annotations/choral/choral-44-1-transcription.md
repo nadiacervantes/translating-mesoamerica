@@ -28,19 +28,19 @@ pagenum: 44
 21.	glia sea dada al Padre,
 22.	Y gloria al eterno hijo
 23.	gloria al espiritu santo,
-
 24.	por los siglos de los siglos.
+    
 25.	Niman quipuas Christiano se Pater noster yhuan matacti
 26.	Ave Maria _ Macuili estacion macuilpa metlapalo Santa
 27.	Maria yca nican castilan tleu tatoli; yhuan macuilpa mu
-28.	picas se Pater noster, yhuan matacti Ave Maria quipicas
+28.	picas se Pater noster, yhuan matacti Ave Maria quipuas
 29.	que muchi asi tue macuili Pater noster yhuan unpuali
-30.	matactique Maria, se Rosario asi tue. Ypanpa iuque nicanqui
-31.	nequi tu tlecuio Dios muctlapalo Santa Maria ypanpa itez mupalehuichris
+30.	matacti ave Maria, se Rosario asi tue. Ypanpa iuque nicanqui
+31.	nequi tu tlecuio Dios muctlapalo Santa Maria ypanpa itz mupalehui chris
 32.	tiano azu onca miquilistli azu onca apisti nusa tentequi pacholistli, se ui
 33.	quichihua tu tlecuio Dios; ipanpa tu tlazonanzin Santa Maria mopeso
 34.	teca tupanpa ixpan Dios, azu iuqui nican tic puaque Santo Rosario
-35.	ixpan tu tlazonanzin Santa Maria.- Niman ycoactamiticpua Sāto
+35.	ixpan tu tlazonanzin Santa Maria.- Niman ycoactami ticpua Sāto
 36.	Rosario tic tlamana iuqui nican yxpan Santa Maria.
 
 37.	con humildad te ofrecemos,
