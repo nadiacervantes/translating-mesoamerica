@@ -3,7 +3,7 @@ ident: 'choral'
 title: 'Transcription'
 pagenum: 44
 ---
-<h3>Dioplomatic</h3>
+<h3>Diplomatic</h3>
 1.	Ypan 30 de Agosto illuio S. Rainūc de nonato de 1654
 2.	Nican onca quenami mopuili Santo Rosario ipal tic
 3.	tlazonanzin Santa Maria. Acastuc tic tlapālo, iuqui
