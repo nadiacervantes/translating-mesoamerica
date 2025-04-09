@@ -92,14 +92,6 @@
 
 
 
-<style>
-  #alphabet-nav { margin:1em 0 1em 0; padding: 0px; }
-  #alphabet-nav a { display:inline-block;padding: 0.2em 0.5em; margin: 0.1em; }
-  .alphabet-item { display:flex; flex-direction:row; flex-wrap:nowrap; }
-  .alphabet-item-img img { width:120px; margin:0.5em; }
-  .alphabet-item-img img { margin:0.5em; }
-</style>
-
 <div class="container">
      <div class="row">
 	      
@@ -149,13 +141,7 @@
 		  jQuery.each(list, function(i,v){
 		    jQuery("#alphabet-list").empty();
 		    if(v.letter == letter) {
-		       console.log(v);
-		       html += "<div class='alphabet-item'>\
-		                  <div class='alphabet-item-img'><img src='"+v.Image+"'/></div>\
-				  <div class='alphabet-item-content'>\
-					  <h3>"+v.case+" "+v.letter+"</h3>
-				  </div>\
-				</div>";
+		       html += "<div class='alphabet-item'><div class='alphabet-item-img'><img src='"+v.Image+"'/></div><div class='alphabet-item-content'>"+v.case+" "+v.letter+"</div></div>";
 		    }
 		  });
 		  jQuery("#alphabet-list").append(html);

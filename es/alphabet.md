@@ -1,6 +1,6 @@
 ---
-layout: default-en
-lang: en
+layout: default-es
+lang: es
 ---
     
 <div class='container'>

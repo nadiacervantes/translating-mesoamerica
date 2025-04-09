@@ -1,8 +1,10 @@
-I"*<div class="container">
+I"V*<div class="container">
      <div class="row">
 	      
        <div class="col-md-12">
-		<h2>Alfabeto</h2>
+		<h2>Alphabet</h2>
+
+		<!--<div>A description of the alphabet portion of the website</div>-->
 		
 		<div id="alphabet-nav">
 		    <a href="#" rel="a" class="letter btn btn-primary">A</a>
@@ -45,7 +47,7 @@
 		  jQuery.each(list, function(i,v){
 		    jQuery("#alphabet-list").empty();
 		    if(v.letter == letter) {
-		       html += "<div class='alphabet-item'><div class='alphabet-item-img'><img src='"+v.Image+"'/></div><div class='alphabet-item-content'><strong>"+v.case+" "+v.letter+"</strong></div></div>";
+		       html += "<div class='alphabet-item'><div class='alphabet-item-img'><img src='"+v.Image+"'/></div><div class='alphabet-item-content'>"+v.case+" "+v.letter+"</div></div>";
 		    }
 		  });
 		  jQuery("#alphabet-list").append(html);
