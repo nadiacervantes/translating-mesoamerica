@@ -31,7 +31,6 @@ lang: en
 		    <a href="#" rel="j" class='letter btn btn-primary'>J</a>
 		    <a href="#" rel="l" class='letter btn btn-primary'>L</a>
 		    <a href="#" rel="m" class='letter btn btn-primary'>M</a>
-		    <a href="#" rel="mi" class='letter btn btn-primary'>Mi</a>
 		    <a href="#" rel="n" class='letter btn btn-primary'>N</a>
 		    <a href="#" rel="o" class='letter btn btn-primary'>O</a>
 		    <a href="#" rel="p" class='letter btn btn-primary'>P</a>
@@ -47,21 +46,12 @@ lang: en
 		    <a href="#" rel="z" class='letter btn btn-primary'>Z</a>
 		</div>
 
-		<div ID="alphabet-list">
-		
-		<!--
-			{% for letter in site.data.alphabet %}
-
-
-			    
-			{% endfor %}
-		-->
-		</div>
+		<div ID="alphabet-list"></div>
 		
 		
 		<script>
 		jQuery(document).ready(function(){
-		 var list =  {{site.data.alphabet | jsonify }};;
+		 var list =  {{site.data.alphabet2025 | jsonify }};
 
 
 		function loadList(letter) {
@@ -70,11 +60,12 @@ lang: en
 		    jQuery("#alphabet-list").empty();
 		    if(v.letter == letter) {
 		       console.log(v);
-		       html += "<div class='alphabet-item'><div class='alphabet-item-img'><img src='{{site.baseurl}}/assets/images/alphabet/"+v.image+"'/></div>\
+		       html += "<div class='alphabet-item'>\
+		                  <div class='alphabet-item-img'><img src='"+v.Image+"'/></div>\
 				  <div class='alphabet-item-content'>\
-					  <h3>"+v.case+" "+v.letter+"</h3>\
-					  <a href='{{site.baseurl}}/"+v.identifier+".html'>"+v.manuscript+"</a>\
-				  </div></div>";
+					  <h3>"+v.case+" "+v.letter+"</h3>
+				  </div>\
+				</div>";
 		    }
 		  });
 		  jQuery("#alphabet-list").append(html);

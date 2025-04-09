@@ -86,8 +86,29 @@ color: #fff;
  flex-wrap:wrap;
  }
 .alphabet-item {
-  width:33%;
+  width:16%;
+  display:flex;
+  flex-direction:column;
+  margin-bottom:1em;
 }
+.alphabet-item-img {
+  width: 200px;
+  height: 200px;
+  background:#EEE;
+  border-radius:5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align:center;
+}
+.alphabet-item-content { font-size:0.85em; }
+  #alphabet-nav { margin:1em 0 1em 0; padding: 0px; }
+  #alphabet-nav a { display:inline-block;padding: 0.2em 0.5em; margin: 0.1em; }
+  .alphabet-item-img img { 
+    max-width:90%;
+    max-height:90%;
+   }
+  .letter { text-transform: inherit !important; }
 
 #decipherment-list { margin:0px; padding:0px; display:flex; flex-direction:row; flex-wrap:wrap;}
 .decipherment { 
