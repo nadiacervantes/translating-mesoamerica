@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 mx-auto">
+
+		  <h2 id="page-title" style="margin:0 0 1em 0">Choral Music Miscellany, 1635</h2>
+		  
+		  <p><span class='pages-label' style='padding: 15px 25px;'>Nahuatl pages:</span> <span id="pages"></span></p>	  
+      </div>
+    </div> <!-- /.row -->
+
+     <div class="row">
+	      
+		<div class="col-md-7">
+		  <div id="tify" style="height: 640px"></div>
+		  {{ content }}
+		  
+		  
+		  
+		</div>
+		
+		<div class="col-md-5">
+		
+			 <div class="w3-bar w3-black">
+			  <button class="btn btn-primary" onclick="openTab('metadata')">Metadata</button>
+			  
+			  <span id="dynamic_tabs">
+			  <!--
+			    <button class="btn btn-primary" onclick="openTab('transcription')">Transcription</button>
+			    <button class="btn btn-primary" onclick="openTab('translation')">Translation</button>
+			     -->
+			  </span>
+			 
+			</div> 
+		
+		
+			<div id="tab_content">
+		
+				<div id="metadata" class="tab">
+				  <h2>Metadata</h2>
+				  <p><label for="doc_title">Title</label> <span id="doc_title"></span></p>
+				  <p><label for="doc_title">Type</label> <span id="doc_type"></span></p>
+				  <p><label for="doc_description">Description</label> <span id="doc_description"></span></p>
+				  <p><label for="doc_source">Source</label> <span id="doc_source"></span></p>
+				 
+
+				</div>
+
+
+				<div id="dynamic_tab_content">
+				
+				
+				
+				<!--
+					<div id="transcription" class="tab" style="display:none">
+					  <h2>Transcription</h2>
+					  <p>Completed</p>
+					</div>
+
+					<div id="translation" class="tab" style="display:none">
+					  <h2>Translation</h2>
+					  <p></p>
+					</div>
+				-->
+				</div>
+				
+				
+				
+			</div> <!-- /#tabcontent -->
+	
+	       </div>
+
+	    </div> <!-- /.row -->	
+
+	      
+	  </div>
+
+ 
+<script src="assets/js/viewer.js"></script>
+
+
+<script>
+var canvas = 1;
+var item = [];
+var items = {{ site.data.manifests | jsonify }}
+var annos = [];
+
+var allannos = {{ site.data.annotations2 | jsonify }}
+
+
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+var itemid = urlParams.get('d');
+var slug = "{{ page.slug }}";
+ 
+
+function loadItem(slug) {
+  jQuery.each(items, function(i,v){
+    if(v.Slug == slug) {
+      item = v;
+      
+      jQuery("#page-title").text(v.Title);
+      jQuery("#doc_title").text(v.Title);
+      jQuery("#doc_type").text(v.Type);
+      jQuery("#doc_description").text(v.Description);
+      jQuery("#doc_source").html("<a href='"+v.Source+"'>Princeton University Library</a>");
+      jQuery("#doc_source").html("<a href='"+v.Source+"'>Princeton University Library</a>");
+      
+      item.Pages = item.Pages.split(",");
+      
+      jQuery.each(item.Pages, function(i,v){
+        jQuery("#pages").append("<button class='btn btn-primary changepage' rel='"+v+"' style='margin-right:2px;'>"+v+"</button>");
+      });
+    }
+    
+  });
+}
+
+function loadAnnos() {
+  jQuery.each(allannos, function(i,v){
+    if(v.slug == item.Slug) {
+        annos.push(v);
+    }
+  });
+
+}   
+
+loadItem(slug);
+loadAnnos();
+
+
+	  
+	  
+	  
+
+
+
+
+    function doit(pagelist) {
+        pagelist = pagelist +"";
+        var pages = pagelist.split(',').map( Number );
+	console.log(pages);
+        tii.setPage(pages);
+    }  
+
+
+function openTab(tabName) {
+   var i;
+   var x = document.getElementsByClassName("tab");
+   for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+   }
+   document.getElementById(tabName).style.display = "block";
+}    
+</script>
+
+ 
+	 
+
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+

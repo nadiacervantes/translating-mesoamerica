@@ -1,0 +1,16 @@
+{
+  "choral": [
+    {
+      "canvas":1,
+      "annotations":[
+        {
+         "title":"Translation",
+         "text":"This is the text"
+        },
+        {
+         "title":"Transcription",
+         "text":"This is the transcription text"
+        }        
+      ]}
+  ]
+}

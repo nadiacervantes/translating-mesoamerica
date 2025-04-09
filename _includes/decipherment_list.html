@@ -1,0 +1,34 @@
+
+<!-- create an array to hold decipherments -->
+
+{% assign my_array = "" | split:"," %}
+
+<!-- add decipherments to array based on identifier-->
+
+{% for d in site.decipherments %}
+  {% if d.identifier == page.identifier %}
+    {% assign my_array = my_array | push: decipher %}
+  {% endif %}
+{% endfor %}
+
+<!-- get a count of the decipherments of print title based on count -->
+
+{% assign count = my_array | size %}
+{% if count == 0 %}<h2>No Pages</h2>{% endif %}
+{% if count == 1 %}<h2>1 page with Nahuatl</h2>{% endif %}
+{% if count > 1 %}<h2>{{ my_array | size }} pages with Nahuatl</h2>{% endif %}
+
+
+<!-- print list of decipherments -->
+
+<ul id="decipherment-list" style="margin-top:1.7em;">
+
+{{d.identifier}}
+{% for d in site.decipherments %}
+  {% if d.identifier == page.identifier %}
+   <div class='decipherment' style='background:url({{d.thumbnail}});background-position:center;background-size:cover;'>
+    <a class="btn btn-primary" href="{{site.baseurl}}{{d.url}}" style="margin:0.5em;">{{ d.title }}</a>
+   </div>
+  {% endif %}
+{% endfor %}
+</ul>

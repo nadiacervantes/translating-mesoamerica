@@ -1,0 +1,16 @@
+
+{% for d in site.decipherments %}
+  {% if d.identifier == page.identifier %} 
+    {% if d.title == page.title %}
+       {% assign count = forloop.index %}
+    {% endif %}
+    {% assign my_array = my_array | push: d %}
+  {% endif %}
+{% endfor %}
+
+{{ count }}
+
+<a href="{{ site.baseurl }}{{ site.decipherments[1].previous.url }}">Prev</a>
+<a href="{{ site.baseurl }}{{ site.decipherments[1].next.url }}">Next</a>
+
+

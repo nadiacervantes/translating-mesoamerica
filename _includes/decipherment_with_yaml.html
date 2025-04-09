@@ -1,0 +1,35 @@
+  <div class="container-fluid">
+  
+  
+    <div class="row">
+      <div class="col-lg-12 col-md-12 mx-auto">
+
+		  <h2 style="margin:0 0 1em 0">{{page.title}}</h2>
+		  
+		  
+      </div>
+    </div> <!-- /.row -->
+
+     <div class="row">
+	      
+		<div class="col-md-4">
+			<div id="viewer" style="height:{{include.viewerheight}};width:100%;"></div>
+		</div>
+		
+		<div class="col-md-8">
+	
+		<div id="annotations">	
+		{% for doc in site.data.annos[page.identifier] %}
+		{% if doc.canvas == page.canvas %}
+		   {% for anno in doc.annotations %}
+		       <div class="annotation"><h3>{{ anno.title}}</h3>{{ anno.text }}</div>
+		   {% endfor %}
+		{{ anno.text}}
+		{% endif %}
+		{% endfor %}
+		</div>
+	       </div>
+
+	    </div> <!-- /.row -->	
+
+    </div>
