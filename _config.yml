@@ -22,8 +22,8 @@ title: Mesoamerican
 email: benj@princeton.edu
 description: >- # this means to ignore newlines until "baseurl:"
   This is a website dedicated to translations of mesoamerican manuscripts from the Princeton University Library
-baseurl: "/translating-mesoamerica" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://translating-mesoamerica.org" # the base hostname & protocol for your site, e.g. http://example.com
 
 collections:
   annotations:
