@@ -10,7 +10,7 @@
  	    var info = data.sequences[0].canvases[{{page.canvas}}].images[0].resource.service['@id']+"/info.json";
 	    var viewer = OpenSeadragon({
 	       id: "viewer",
-	       prefixUrl: "{{site.baseurl}}/assets/openseadragon/images/",
+	       prefixUrl: "/assets/openseadragon/images/",
 	       tileSources:[info]
 	    });
 	  

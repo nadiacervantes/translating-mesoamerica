@@ -86,7 +86,7 @@ jQuery(document).ready(function(){
 	   var myIcon = L.divIcon({className: "my-custom-pin",iconAnchor: [0, 24],labelAnchor: [-6, 0],popupAnchor: [0, -36],html: `<span class='icon' style='background:`+location.Color+`' />`});
 	   jQuery("#mapmenu ul").append("<li><span class='colorsquare' style='background:"+location.Color+"'></span><a href='#'class='layer' data-index='"+index+"' data-loc='"+location.Latitude+","+location.Longitude+"'>"+location.Title+"</a></li>");
 	   var latlng = [location.Latitude,location.Longitude];
-	   var popup = "<h4>"+location.Location+"</h4><br /><a href='{{site.baseurl}}/es/"+location.manifest_identifier+".html'>"+location.Title+"</a>";
+	   var popup = "<h4>"+location.Location+"</h4><br /><a href='/es/"+location.manifest_identifier+".html'>"+location.Title+"</a>";
 	   markers.push(L.marker(latlng, { icon: myIcon }).bindPopup(popup).addTo(map));
 	});
 	
