@@ -39,23 +39,43 @@ lang: en
 		    <a href="#" rel="z" class='letter btn btn-primary'>Z</a>
 		</div>
 
-		<div ID="alphabet-list"></div>
+		<div ID="alphabet-section"></div>
 		
 		
 		<script>
 		jQuery(document).ready(function(){
 		 var list =  {{site.data.alphabet2025 | jsonify }};
+		 var manifests = {{site.data.manifests | jsonify }};
 
 
 		function loadList(letter) {
+		
+		  jQuery("#alphabet-section").empty();
 		  var html = "";
-		  jQuery.each(list, function(i,v){
-		    jQuery("#alphabet-list").empty();
-		    if(v.letter == letter) {
-		       html += "<div class='alphabet-item'><div class='alphabet-item-img'><img src='"+v.Image+"'/></div><div class='alphabet-item-content'>"+v.case+" "+v.letter+"</div></div>";
-		    }
-		  });
-		  jQuery("#alphabet-list").append(html);
+		  
+		  var output = [];
+		  
+		  jQuery.each(manifests, function(j,k){
+		    jQuery.each(list, function(i,v){
+		      if(v.letter == letter && v.Manifest == k.manifest) {
+		        if(output[k.manifest] == undefined) { output[k.manifest] = { 'label':k.title,'items':[]}; }
+		        output[k.manifest].items.push(v);
+		      }
+		    });
+		  }); 
+		  
+		  for(o in output) {
+		    html = "<h4>"+output[o].label+"</h4>";
+		    html += "<div class='alphabet-list'>";
+		    jQuery.each(output[o].items, function(i,v){
+		      html += `<div class='alphabet-item'><div class='alphabet-item-img'><img src='${v.Image}'/></div><div class='alphabet-item-content'>${v.case} ${v.letter}</div></div>`;
+		    });
+		    html += "</div>";
+	            jQuery("#alphabet-section").append(html);
+		  }
+
+		  
+		  
 		}
 		
 		
