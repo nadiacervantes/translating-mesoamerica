@@ -86,14 +86,16 @@ color: #fff;
  flex-wrap:wrap;
  }
 .alphabet-item {
-  width:16%;
+  width:20%;
   display:flex;
   flex-direction:column;
   margin-bottom:1em;
+  font-size:0.8em;
+  cursor:pointer;
 }
 .alphabet-item-img {
-  width: 200px;
-  height: 200px;
+  width: 96%;
+  height: 90px;
   background:#EEE;
   border-radius:5px;
   display: flex;
